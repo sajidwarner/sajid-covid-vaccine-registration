@@ -8,11 +8,15 @@ Route::get('/', function () {
 
 
 
-Route::prefix('registration')->name('registration.')->group(function () {
-    Route::get('/', [RegistrationController::class, 'index'])->name('index');
-    Route::post('/', [RegistrationController::class, 'store'])->name('store');
+Route::controller(RegistrationController::class)->group(function () {
+
+    Route::prefix('registration')->name('registration.')->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::post('/', 'store')->name('store');
+    });
+
+    Route::prefix('search')->name('search.')->group(function () {
+        Route::get('/', 'searchSchedule')->name('index');
+        Route::get('/schedule', 'search')->name('schedule');
+    });
 });
-
-Route::get('/search-schedule', [RegistrationController::class, 'search'])->name('search.schedule');
-
-Route::get('/search', [RegistrationController::class, 'search'])->name('search');

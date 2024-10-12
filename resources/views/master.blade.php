@@ -22,7 +22,7 @@
                                 <a class="nav-link" href="{{ route('registration.index') }}">Registration</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('search') }}">Search Schedule</a>
+                                <a class="nav-link" href="{{ route('search.index') }}">Search Schedule</a>
                             </li>
                         </ul>
                     </div>

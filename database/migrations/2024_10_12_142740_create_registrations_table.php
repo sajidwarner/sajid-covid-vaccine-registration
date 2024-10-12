@@ -15,8 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('vaccine_center_id');
-            $table->date('scheduled_date')->nullable();
-            $table->tinyInteger('status')->default(0)->comment('0 = Not scheduled, 1 = Scheduled, 2 = Vaccinated');
+            $table->date('scheduled_date')->nullable()->comment('null = Not scheduled, date = Scheduled, old date = Vaccinated');
             $table->timestamps();
         });
     }

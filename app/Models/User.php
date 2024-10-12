@@ -13,6 +13,9 @@ class User extends Model
 
     protected $guarded = ['id'];
 
-
+    public function registration()
+    {
+        return $this->hasOne(Registration::class);
+    }
 
 }
