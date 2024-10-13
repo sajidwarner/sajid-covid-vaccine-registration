@@ -27,7 +27,7 @@ To run this project, follow these steps:
 git clone https://github.com/sajidwarner/sajid-covid-vaccine-registration.git
 ```
 ```bash
-cd covid-vaccine-registration
+cd sajid-covid-vaccine-registration
 ```
 
 ### Step 2: Install dependencies
