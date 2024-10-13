@@ -11,7 +11,7 @@ class ScheduleVaccinations extends Command
 
     protected $signature = 'app:schedule-vaccinations';
 
-    protected $description = 'Schedule vaccinations for users';
+    protected $description = 'Schedule vaccinations date for users';
 
 
     public function handle()

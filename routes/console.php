@@ -13,4 +13,8 @@ Schedule::command('app:schedule-vaccinations')->withoutOverlapping()
                                             ->runInBackground()
                                             ->everyMinute();
 
+Schedule::command('app:send-vaccination-reminders')->withoutOverlapping()
+                                            ->runInBackground()
+                                            ->dailyAt('21:00');
+
 

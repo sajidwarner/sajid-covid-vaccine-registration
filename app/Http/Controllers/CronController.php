@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 class CronController extends Controller
 {
-    public function  scheduleVaccinations()
+    public  function  scheduleVaccinations()
     {
         $users = User::with(['registration' => function ($query) {
                             $query->select('id', 'user_id', 'scheduled_date', 'vaccine_center_id')
@@ -33,7 +33,6 @@ class CronController extends Controller
         }
 
     }
-
 
 
     public  function getNextAvailableDate(VaccineCenter $center)

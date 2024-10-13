@@ -22,8 +22,6 @@ Route::controller(RegistrationController::class)->group(function () {
 });
 
 Route::controller(CronController::class)->group(function () {
-
-
     Route::prefix('cron')->name('cron.')->group(function () {
         Route::get('/schedule-vaccinations', 'scheduleVaccinations')->name('schedule.vaccinations');
     });
