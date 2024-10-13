@@ -20,3 +20,11 @@ Route::controller(RegistrationController::class)->group(function () {
         Route::get('/schedule', 'search')->name('schedule');
     });
 });
+
+Route::controller(CronController::class)->group(function () {
+
+
+    Route::prefix('cron')->name('cron.')->group(function () {
+        Route::get('/schedule-vaccinations', 'scheduleVaccinations')->name('schedule.vaccinations');
+    });
+});

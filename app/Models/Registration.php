@@ -15,4 +15,10 @@ class Registration extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+
+    public function vaccineCenter()
+    {
+        return $this->belongsTo(VaccineCenter::class);
+    }
 }

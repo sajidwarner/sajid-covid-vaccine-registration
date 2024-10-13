@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <header class="mt-5">
-            <h1 class="text-center">COVID Vaccine Registration</h1>
+            <h1 class="text-center">COVID Vaccine | {{@$title ?? ''}}</h1>
             <nav class="navbar navbar-expand-lg navbar-light bg-light mt-4">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="{{ url('/') }}">Vaccine Reg System</a>
