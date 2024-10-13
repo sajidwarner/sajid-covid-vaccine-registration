@@ -89,3 +89,37 @@ Run the following command to start the Laravel development server:
 php artisan serve
 ```
 The application will be accessible at http://localhost:8000.
+
+
+### Step 7: Start and Check Scheduled Tasks on Localhost
+To manually run the scheduler in the background for testing on localhost, use the following command:
+The vaccination schedule will be run every 5 minutes so that you can check the status.
+
+
+```bash
+php artisan schedule:work
+```
+or 
+```bash
+php artisan schedule:run
+```
+
+To manually run the scheduler in the background for instant testing of email notifications on your localhost, use the following command:
+
+```bash
+php artisan app:send-vaccination-reminders
+```
+
+## Optimization Notes
+To optimize the performance of user registration and search:
+
+Implement caching for frequently accessed data (e.g., vaccine centers).
+Use indexing on database columns that are frequently queried (e.g., NID).
+
+
+## Future Enhancements
+If an additional requirement for sending SMS notifications along with email notifications is introduced:
+
+Integrate an SMS gateway.
+Create a service class to handle SMS sending.
+Update the notification logic to include SMS notifications alongside email notifications.

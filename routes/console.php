@@ -11,7 +11,7 @@ Artisan::command('inspire', function () {
 
 Schedule::command('app:schedule-vaccinations')->withoutOverlapping()
                                             ->runInBackground()
-                                            ->everyMinute();
+                                            ->everyFiveMinutes();
 
 Schedule::command('app:send-vaccination-reminders')->withoutOverlapping()
                                             ->runInBackground()
