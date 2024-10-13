@@ -90,6 +90,8 @@ php artisan serve
 ```
 The application will be accessible at http://localhost:8000.
 
+or check  INFO  Server running on your local machine
+
 
 ### Step 7: Start and Check Scheduled Tasks on Localhost
 To manually run the scheduler in the background for testing on localhost, use the following command:
