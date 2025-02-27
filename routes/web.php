@@ -13,7 +13,9 @@ Route::controller(RegistrationController::class)->group(function () {
     Route::prefix('registration')->name('registration.')->group(function () {
         Route::get('/', 'index')->name('index');
         Route::post('/', 'store')->name('store');
+        
     });
+
 
     Route::prefix('search')->name('search.')->group(function () {
         Route::get('/', 'searchSchedule')->name('index');
